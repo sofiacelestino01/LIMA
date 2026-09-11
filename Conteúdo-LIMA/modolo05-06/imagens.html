@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Responsivas</title>
+    <style>
+        .imagem-responsiva{
+            height: auto;
+            max-width: 100x;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Imagens Responsivas</h1>
+    <p>Selecione <button><a href="index.html" style="text-decoration: none;" >voltar </a></button></p>
+    <h2>Imagens Responsivas com HTML puro</h2>
+
+     <picture>
+        <source media="(max-width:750px)" srcset="imagens/imagem_300.jpg" type="image/jpg"> 
+        <source media="(max-width:1050px)" srcset="imagens/imagem_600.jpg" type="image/jpg">
+        <img src="imagens/imagem_1200.jpg" alt="Imagens Responsivas de Paisagem">
+     </picture>
+
+     <h2>Imagem responsiva utilizando CSS</h2>
+     <img 
+     class="imagem-responsiva"
+     src="imagens/imagem_600.jpg" 
+     srcset="imagens/imagem_300.jpg 300w, imagens/imagem_600.jpg 600w, imagens/imagem_1200.jpg 1200w"
+     sizes="(max-width: 600px) 100vw, 600px"
+     alt="imagem de paisagem responsiva utilizando CSS"
+     width="600"
+     height="450"
+     loading="lazy">
+
+     
+</body>
+</html>
